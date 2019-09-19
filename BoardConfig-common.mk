@@ -17,16 +17,7 @@
 include device/sony/yoshino-common/BoardConfigPlatform.mk
 include vendor/sony/maple/BoardConfigVendor.mk
 
-DEVICE_PATH := device/sony/maple
-
 PRODUCT_PLATFORM := yoshino
-
-# Init
-TARGET_LIBINIT_YOSHINO_DEFINES_FILE := $(DEVICE_PATH)/init_maple/init_maple.cpp
-TARGET_UNIFIED_DEVICE := true
-
-### BOOTLOADER
-TARGET_BOOTLOADER_BOARD_NAME := G8141
 
 ### KERNEL
 TARGET_KERNEL_CONFIG := lineage-msm8998-yoshino-maple_defconfig

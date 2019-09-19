@@ -10,20 +10,20 @@ endif
 ### DALVIK
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
-DEVICE_PATH := device/sony/maple
+COMMON_PATH := device/sony/maple-common
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay
+    $(COMMON_PATH)/overlay
 
 ifeq ($(WITH_TWRP),true)
-include $(DEVICE_PATH)/device/init.mk
+include $(COMMON_PATH)/device/init.mk
 else # WITH_TWRP
-include $(DEVICE_PATH)/device/*.mk
-include $(DEVICE_PATH)/vendor_prop.mk
+include $(COMMON_PATH)/device/*.mk
+include $(COMMON_PATH)/vendor_prop.mk
 endif # WITH_TWRP
 
 # Disable treble
