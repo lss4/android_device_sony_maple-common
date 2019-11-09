@@ -6,8 +6,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, device/sony/maple-common/device.mk)
 
 ### BOOTANIMATION
-# vendor/aosp/config/bootanimation.mk
-TARGET_BOOT_ANIMATION_RES := 1080
+# vendor/havoc/config/bootanimation.mk
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
 
 ### AOSP Extended
-$(call inherit-product, vendor/aosp/config/common.mk)
+$(call inherit-product, vendor/havoc/config/common.mk)
